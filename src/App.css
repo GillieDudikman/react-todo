@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+html {
+    @apply flex justify-center bg-pink-500
+}
+.container {
+    @apply drop-shadow-lg rounded-t-3xl relative border-4 border-pink-600 mt-3 w-96
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topSection {
+    @apply border-r-0 border-l-0 bg-pink-300 rounded-t-3xl border-t-0 border-b-purple-950 border-4 rounded-b-md mt-0 p-3
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topSection input {
+    @apply mt-1 relative px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+    focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.topSection button {
+    @apply mx-3 px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-600 hover:text-white
+    hover:bg-purple-600 hover:border-transparent focus:outline-none
+    disabled:opacity-30 disabled:hover:text-purple-600 disabled:hover:bg-pink-300 disabled:hover:border-purple-600
 }
 
-.App-link {
-  color: #61dafb;
+.items {
+    @apply p-3 bg-pink-300 hover:bg-pink-400 relative even:bg-pink-200
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.itemsButtons {
+    @apply block mt-2 mx-24
+}
+
+.itemsButtons button {
+    @apply mx-1 px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-600 hover:text-white
+    hover:bg-purple-600 hover:border-transparent focus:outline-none
+}
+
+.edit {
+    @apply bg-purple-950 relative py-2 -mx-3 mt-3 -mb-3 rounded-t-2xl
+}
+
+.edit input {
+    @apply mt-1 ml-2 relative px-1 py-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+    focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+}
+
+.edit button {
+    @apply relative my-2 mx-1 px-4 py-1 text-sm text-white font-semibold rounded-full border border-white hover:text-white
+    hover:bg-purple-600 hover:border-transparent focus:outline-none disabled:opacity-30 disabled:hover:border-white disabled:hover:bg-purple-950
 }
